@@ -1,0 +1,36 @@
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .App{
+        max-width: 800px;
+        min-height: 400px;
+        background-color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+    }
+}
+.Navigeiton {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li{
+            list-style: none;
+            margin-left: 1rem;
+            &:first-child{
+                margin-left: 0;
+            }
+
+            button {
+                padding: 1rem 2rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+            }
+        }
+    }
+}
