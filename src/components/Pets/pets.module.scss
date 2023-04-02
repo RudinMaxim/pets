@@ -6,5 +6,20 @@
 		background-color: #f3fefe;
 		height: 100%;
 	}
-	
+}
+.AddPets {
+	display: flex;
+	align-self: center;
+	justify-content: space-between;
+	input {
+		border: none;
+		padding: 0.5rem 1rem;
+		max-width: 70%;
+		font-size: 1.5rem;
+	}
+	label{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }

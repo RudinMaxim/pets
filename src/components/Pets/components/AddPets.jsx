@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { useRef } from 'react';
+import style from '../pets.module.scss';
+import add from '../../../assets/add.svg';
 
 function AddPets(props) {
 	const inputDate = useRef(null);
@@ -17,26 +19,24 @@ function AddPets(props) {
 				headers: {
 					'Content-Type': 'application/json',
 				},
-			}) 
+			})
 			.then(() => {
 				props.toLinke();
 			});
 	};
 
 	return (
-		<div>
-			<fieldset>
-				<legend>Добавить</legend>
-				<label htmlFor='input-add' id='label-add' onClick={() => AddPets()}>
-					+Add
-				</label>
-				<input
-					type='text'
-					id='input-add'
-					aria-labelledby='label-add'
-					ref={inputDate}
-				/>
-			</fieldset>
+		<div className={style.AddPets}>
+			<input
+				type='text'
+				id='input-add'
+				aria-labelledby='label-add'
+				ref={inputDate}
+				placeholder='Введи имя котику'
+			/>
+			<label htmlFor='input-add' id='label-add' onClick={() => AddPets()}>
+				<img src={add} alt='add' />
+			</label>
 		</div>
 	);
 }

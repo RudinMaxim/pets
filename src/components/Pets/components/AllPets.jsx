@@ -19,12 +19,11 @@ function AllPets() {
 
 	return (
 		<>
-			<div>AllPetsList</div>
 			<ul className={style.AllPetsList}>
 				{!!Pets &&
 					Pets.map((pet, index) => {
 						<li key={index}>
-							<span>{pet.Name}</span>
+							<span>{pet.name}</span>
 						</li>;
 					})}
 			</ul>
